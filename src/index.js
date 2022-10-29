@@ -31,7 +31,8 @@ nextButton.addEventListener("click", (e) => {
         console.log(nextSlide)
     } else
     {
-
+        let amountToMove = currentSlide.getBoundingClientRect().width
+        track.style.transform = `translateX(0px)`
     }
 
     
