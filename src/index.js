@@ -10,7 +10,7 @@ const imageList = document.querySelectorAll(".image")
 
 const slideWidth = slides[0].getBoundingClientRect().width
 
-console.log(slides[0])
+
 
 console.log(slideWidth)
 
