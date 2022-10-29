@@ -16,11 +16,12 @@ const slideWidth = 400
 
 
 nextButton.addEventListener("click", (e) => {
-    let currentSlide = document.querySelector(".currentSlide")
-    let nextSlide = currentSlide.nextElementSibling
-
+        let currentSlide = document.querySelector(".currentSlide")
+        let nextSlide = currentSlide.nextElementSibling
     if (nextSlide != null) 
     {
+        
+
         let amountToMove = nextSlide.getBoundingClientRect().width
         track.style.transform = `translateX(-${amountToMove * slidesArray.indexOf(nextSlide)}px)`
         currentSlide.classList.remove("currentSlide")
@@ -33,6 +34,11 @@ nextButton.addEventListener("click", (e) => {
     {
         let amountToMove = currentSlide.getBoundingClientRect().width
         track.style.transform = `translateX(0px)`
+        currentSlide.classList.remove("currentSlide")
+        slidesArray[0].classList.add("currentSlide")
+        currentSlide = slidesArray[0]
+
+        
     }
 
     
